@@ -56,7 +56,7 @@ $ vault auth enable -path=banana -plugin-name=banana-auth-vault-plugin plugin
 * At this point, the plugin is registered and enabled. To test the implementation, submit a login request with an invalid secret:
 
 ```shell
-$ vault write auth/banana/login password="laalala"
+$ vault write auth/banana/login password="laalaladada"
 
 Error writing data to auth/banana/login: Error making API request.
 

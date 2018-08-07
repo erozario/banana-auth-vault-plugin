@@ -1,0 +1,16 @@
+# .travis.yml
+language: go
+go:
+  - '1.10.2'
+
+before_install:
+  - curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+
+install:
+  - dep ensure -v
+
+script:
+  - go build
+
+after_success:
+  - curl -s https://raw.githubusercontent.com/goreleaser/get/master/latest | bash
